@@ -120,6 +120,14 @@ python verify_results.py --results results_reproduce
 
 ![扰动表现](figures/robustness.png)
 
+### 补充诊断图
+
+```powershell
+python extra_figures.py
+```
+
+生成类别分布、逐层开销、压缩精度权衡、种子波动、逐类别 F1、置信度分布、可靠性、阈值覆盖率、扰动下降与实机延迟等十张诊断图。图片位于 figures/extra_*.png，并提供同名矢量 PDF；源数据、固定分箱与 SHA256 记录于 results/extra_figures.json。只读取已有训练结果，不重新训练、不替换原始计时。中文绘图使用 Windows 微软雅黑字体。
+
 ## 7 启动单字识别
 
 ```powershell
@@ -176,4 +184,3 @@ MNIST 指标不等于真实票据指标。平移检查揭示明显的位置敏�
 - Chollet. Xception, CVPR 2017. <https://openaccess.thecvf.com/content_cvpr_2017/html/Chollet_Xception_Deep_Learning_CVPR_2017_paper.html>
 
 代码采用 MIT 许可证，数据和引用资料遵循各自使用条件。
-
