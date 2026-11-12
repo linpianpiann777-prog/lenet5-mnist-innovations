@@ -1,0 +1,28 @@
+{
+  "all_passed": true,
+  "samples": [
+    {
+      "sample": 0,
+      "label": 7,
+      "prediction": 7,
+      "five_models_match": true
+    },
+    {
+      "sample": 115,
+      "label": 4,
+      "prediction": 9,
+      "five_models_match": true
+    },
+    {
+      "sample": 9999,
+      "label": 6,
+      "prediction": 6,
+      "five_models_match": true
+    }
+  ],
+  "model_switch": true,
+  "upload": true,
+  "threshold": true,
+  "download_png": true,
+  "invalid_inputs": true
+}

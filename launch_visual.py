@@ -18,7 +18,8 @@ def ready(url):
     try:
         with urllib.request.urlopen(url+'/api/info', timeout=2) as response:
             info = json.load(response)
-        return (info.get('test_size') == 10000
+        return (info.get('service') == 'lenet-digit-lab' and info.get('ui_version',0) >= 2
+                and info.get('test_size') == 10000
                 and set(info.get('variants', [])) == {'baseline', 'dw_c3', 'dw', 'se', 'dw_se'})
     except (OSError, ValueError, urllib.error.URLError):
         return False
