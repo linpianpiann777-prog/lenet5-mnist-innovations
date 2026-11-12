@@ -130,6 +130,8 @@ python extra_figures.py
 
 ## 7 启动单字识别
 
+Windows 可双击 `open_visual.cmd` 一键打开，或运行 `python launch_visual.py`。启动器会复用已运行的本项目服务并打开浏览器；默认端口被其他服务占用时会明确提示。
+
 ```powershell
 python app.py
 ```
