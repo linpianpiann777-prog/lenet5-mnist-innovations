@@ -1,0 +1,789 @@
+{
+  "baseline": {
+    "layers": [
+      {
+        "name": "c1",
+        "type": "Conv2d",
+        "input": [
+          1,
+          1,
+          32,
+          32
+        ],
+        "output": [
+          1,
+          6,
+          28,
+          28
+        ],
+        "parameters": 156,
+        "macs": 117600
+      },
+      {
+        "name": "pool",
+        "type": "AvgPool2d",
+        "input": [
+          1,
+          6,
+          28,
+          28
+        ],
+        "output": [
+          1,
+          6,
+          14,
+          14
+        ],
+        "parameters": 0,
+        "macs": 0
+      },
+      {
+        "name": "c3",
+        "type": "Conv2d",
+        "input": [
+          1,
+          6,
+          14,
+          14
+        ],
+        "output": [
+          1,
+          16,
+          10,
+          10
+        ],
+        "parameters": 2416,
+        "macs": 240000
+      },
+      {
+        "name": "pool",
+        "type": "AvgPool2d",
+        "input": [
+          1,
+          16,
+          10,
+          10
+        ],
+        "output": [
+          1,
+          16,
+          5,
+          5
+        ],
+        "parameters": 0,
+        "macs": 0
+      },
+      {
+        "name": "c5",
+        "type": "Conv2d",
+        "input": [
+          1,
+          16,
+          5,
+          5
+        ],
+        "output": [
+          1,
+          120,
+          1,
+          1
+        ],
+        "parameters": 48120,
+        "macs": 48000
+      },
+      {
+        "name": "f6",
+        "type": "Linear",
+        "input": [
+          1,
+          120
+        ],
+        "output": [
+          1,
+          84
+        ],
+        "parameters": 10164,
+        "macs": 10080
+      },
+      {
+        "name": "head",
+        "type": "Linear",
+        "input": [
+          1,
+          84
+        ],
+        "output": [
+          1,
+          10
+        ],
+        "parameters": 850,
+        "macs": 840
+      }
+    ],
+    "parameters": 61706,
+    "macs": 416520,
+    "flops": 833040
+  },
+  "dw_c3": {
+    "layers": [
+      {
+        "name": "c1",
+        "type": "Conv2d",
+        "input": [
+          1,
+          1,
+          32,
+          32
+        ],
+        "output": [
+          1,
+          6,
+          28,
+          28
+        ],
+        "parameters": 156,
+        "macs": 117600
+      },
+      {
+        "name": "pool",
+        "type": "AvgPool2d",
+        "input": [
+          1,
+          6,
+          28,
+          28
+        ],
+        "output": [
+          1,
+          6,
+          14,
+          14
+        ],
+        "parameters": 0,
+        "macs": 0
+      },
+      {
+        "name": "c3.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          6,
+          14,
+          14
+        ],
+        "output": [
+          1,
+          6,
+          10,
+          10
+        ],
+        "parameters": 150,
+        "macs": 15000
+      },
+      {
+        "name": "c3.1",
+        "type": "Conv2d",
+        "input": [
+          1,
+          6,
+          10,
+          10
+        ],
+        "output": [
+          1,
+          16,
+          10,
+          10
+        ],
+        "parameters": 112,
+        "macs": 9600
+      },
+      {
+        "name": "pool",
+        "type": "AvgPool2d",
+        "input": [
+          1,
+          16,
+          10,
+          10
+        ],
+        "output": [
+          1,
+          16,
+          5,
+          5
+        ],
+        "parameters": 0,
+        "macs": 0
+      },
+      {
+        "name": "c5",
+        "type": "Conv2d",
+        "input": [
+          1,
+          16,
+          5,
+          5
+        ],
+        "output": [
+          1,
+          120,
+          1,
+          1
+        ],
+        "parameters": 48120,
+        "macs": 48000
+      },
+      {
+        "name": "f6",
+        "type": "Linear",
+        "input": [
+          1,
+          120
+        ],
+        "output": [
+          1,
+          84
+        ],
+        "parameters": 10164,
+        "macs": 10080
+      },
+      {
+        "name": "head",
+        "type": "Linear",
+        "input": [
+          1,
+          84
+        ],
+        "output": [
+          1,
+          10
+        ],
+        "parameters": 850,
+        "macs": 840
+      }
+    ],
+    "parameters": 59552,
+    "macs": 201120,
+    "flops": 402240
+  },
+  "dw": {
+    "layers": [
+      {
+        "name": "c1",
+        "type": "Conv2d",
+        "input": [
+          1,
+          1,
+          32,
+          32
+        ],
+        "output": [
+          1,
+          6,
+          28,
+          28
+        ],
+        "parameters": 156,
+        "macs": 117600
+      },
+      {
+        "name": "pool",
+        "type": "AvgPool2d",
+        "input": [
+          1,
+          6,
+          28,
+          28
+        ],
+        "output": [
+          1,
+          6,
+          14,
+          14
+        ],
+        "parameters": 0,
+        "macs": 0
+      },
+      {
+        "name": "c3.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          6,
+          14,
+          14
+        ],
+        "output": [
+          1,
+          6,
+          10,
+          10
+        ],
+        "parameters": 150,
+        "macs": 15000
+      },
+      {
+        "name": "c3.1",
+        "type": "Conv2d",
+        "input": [
+          1,
+          6,
+          10,
+          10
+        ],
+        "output": [
+          1,
+          16,
+          10,
+          10
+        ],
+        "parameters": 112,
+        "macs": 9600
+      },
+      {
+        "name": "pool",
+        "type": "AvgPool2d",
+        "input": [
+          1,
+          16,
+          10,
+          10
+        ],
+        "output": [
+          1,
+          16,
+          5,
+          5
+        ],
+        "parameters": 0,
+        "macs": 0
+      },
+      {
+        "name": "c5.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          16,
+          5,
+          5
+        ],
+        "output": [
+          1,
+          16,
+          1,
+          1
+        ],
+        "parameters": 400,
+        "macs": 400
+      },
+      {
+        "name": "c5.1",
+        "type": "Conv2d",
+        "input": [
+          1,
+          16,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          120,
+          1,
+          1
+        ],
+        "parameters": 2040,
+        "macs": 1920
+      },
+      {
+        "name": "f6",
+        "type": "Linear",
+        "input": [
+          1,
+          120
+        ],
+        "output": [
+          1,
+          84
+        ],
+        "parameters": 10164,
+        "macs": 10080
+      },
+      {
+        "name": "head",
+        "type": "Linear",
+        "input": [
+          1,
+          84
+        ],
+        "output": [
+          1,
+          10
+        ],
+        "parameters": 850,
+        "macs": 840
+      }
+    ],
+    "parameters": 13872,
+    "macs": 155440,
+    "flops": 310880
+  },
+  "se": {
+    "layers": [
+      {
+        "name": "c1",
+        "type": "Conv2d",
+        "input": [
+          1,
+          1,
+          32,
+          32
+        ],
+        "output": [
+          1,
+          6,
+          28,
+          28
+        ],
+        "parameters": 156,
+        "macs": 117600
+      },
+      {
+        "name": "pool",
+        "type": "AvgPool2d",
+        "input": [
+          1,
+          6,
+          28,
+          28
+        ],
+        "output": [
+          1,
+          6,
+          14,
+          14
+        ],
+        "parameters": 0,
+        "macs": 0
+      },
+      {
+        "name": "c3",
+        "type": "Conv2d",
+        "input": [
+          1,
+          6,
+          14,
+          14
+        ],
+        "output": [
+          1,
+          16,
+          10,
+          10
+        ],
+        "parameters": 2416,
+        "macs": 240000
+      },
+      {
+        "name": "se.gate.1",
+        "type": "Conv2d",
+        "input": [
+          1,
+          16,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          4,
+          1,
+          1
+        ],
+        "parameters": 68,
+        "macs": 64
+      },
+      {
+        "name": "se.gate.3",
+        "type": "Conv2d",
+        "input": [
+          1,
+          4,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          16,
+          1,
+          1
+        ],
+        "parameters": 80,
+        "macs": 64
+      },
+      {
+        "name": "pool",
+        "type": "AvgPool2d",
+        "input": [
+          1,
+          16,
+          10,
+          10
+        ],
+        "output": [
+          1,
+          16,
+          5,
+          5
+        ],
+        "parameters": 0,
+        "macs": 0
+      },
+      {
+        "name": "c5",
+        "type": "Conv2d",
+        "input": [
+          1,
+          16,
+          5,
+          5
+        ],
+        "output": [
+          1,
+          120,
+          1,
+          1
+        ],
+        "parameters": 48120,
+        "macs": 48000
+      },
+      {
+        "name": "f6",
+        "type": "Linear",
+        "input": [
+          1,
+          120
+        ],
+        "output": [
+          1,
+          84
+        ],
+        "parameters": 10164,
+        "macs": 10080
+      },
+      {
+        "name": "head",
+        "type": "Linear",
+        "input": [
+          1,
+          84
+        ],
+        "output": [
+          1,
+          10
+        ],
+        "parameters": 850,
+        "macs": 840
+      }
+    ],
+    "parameters": 61854,
+    "macs": 416648,
+    "flops": 833296
+  },
+  "dw_se": {
+    "layers": [
+      {
+        "name": "c1",
+        "type": "Conv2d",
+        "input": [
+          1,
+          1,
+          32,
+          32
+        ],
+        "output": [
+          1,
+          6,
+          28,
+          28
+        ],
+        "parameters": 156,
+        "macs": 117600
+      },
+      {
+        "name": "pool",
+        "type": "AvgPool2d",
+        "input": [
+          1,
+          6,
+          28,
+          28
+        ],
+        "output": [
+          1,
+          6,
+          14,
+          14
+        ],
+        "parameters": 0,
+        "macs": 0
+      },
+      {
+        "name": "c3.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          6,
+          14,
+          14
+        ],
+        "output": [
+          1,
+          6,
+          10,
+          10
+        ],
+        "parameters": 150,
+        "macs": 15000
+      },
+      {
+        "name": "c3.1",
+        "type": "Conv2d",
+        "input": [
+          1,
+          6,
+          10,
+          10
+        ],
+        "output": [
+          1,
+          16,
+          10,
+          10
+        ],
+        "parameters": 112,
+        "macs": 9600
+      },
+      {
+        "name": "se.gate.1",
+        "type": "Conv2d",
+        "input": [
+          1,
+          16,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          4,
+          1,
+          1
+        ],
+        "parameters": 68,
+        "macs": 64
+      },
+      {
+        "name": "se.gate.3",
+        "type": "Conv2d",
+        "input": [
+          1,
+          4,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          16,
+          1,
+          1
+        ],
+        "parameters": 80,
+        "macs": 64
+      },
+      {
+        "name": "pool",
+        "type": "AvgPool2d",
+        "input": [
+          1,
+          16,
+          10,
+          10
+        ],
+        "output": [
+          1,
+          16,
+          5,
+          5
+        ],
+        "parameters": 0,
+        "macs": 0
+      },
+      {
+        "name": "c5.0",
+        "type": "Conv2d",
+        "input": [
+          1,
+          16,
+          5,
+          5
+        ],
+        "output": [
+          1,
+          16,
+          1,
+          1
+        ],
+        "parameters": 400,
+        "macs": 400
+      },
+      {
+        "name": "c5.1",
+        "type": "Conv2d",
+        "input": [
+          1,
+          16,
+          1,
+          1
+        ],
+        "output": [
+          1,
+          120,
+          1,
+          1
+        ],
+        "parameters": 2040,
+        "macs": 1920
+      },
+      {
+        "name": "f6",
+        "type": "Linear",
+        "input": [
+          1,
+          120
+        ],
+        "output": [
+          1,
+          84
+        ],
+        "parameters": 10164,
+        "macs": 10080
+      },
+      {
+        "name": "head",
+        "type": "Linear",
+        "input": [
+          1,
+          84
+        ],
+        "output": [
+          1,
+          10
+        ],
+        "parameters": 850,
+        "macs": 840
+      }
+    ],
+    "parameters": 14020,
+    "macs": 155568,
+    "flops": 311136
+  }
+}

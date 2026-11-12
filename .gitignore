@@ -1,0 +1,10 @@
+__pycache__/
+.venv/
+data/
+qa/
+results_reproduce/
+*.zip
+*.log
+results_c3_pilot/
+report/
+local_tools/

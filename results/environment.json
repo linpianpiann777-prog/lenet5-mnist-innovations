@@ -1,0 +1,45 @@
+{
+  "python": "3.12.10",
+  "torch": "2.11.0+cu128",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "train_size": 54000,
+  "validation_size": 6000,
+  "test_size": 10000,
+  "split_seed": 2026,
+  "dataset_md5": {
+    "train-images-idx3-ubyte.gz": "f68b3c2dcbeaaa9fbdd348bbdeb94873",
+    "train-labels-idx1-ubyte.gz": "d53e105ee54ea40749a09fcbcd1e9432",
+    "t10k-images-idx3-ubyte.gz": "9fb629c4189551a2d022fa330f9573f3",
+    "t10k-labels-idx1-ubyte.gz": "ec29112dd5afa0611ce80d1b7f02629c"
+  },
+  "args": {
+    "epochs": 15,
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "variants": [
+      "baseline",
+      "dw_c3",
+      "dw",
+      "se",
+      "dw_se"
+    ],
+    "batch_size": 256,
+    "budget_seconds": 6900,
+    "output": "results",
+    "benchmark": false
+  },
+  "optimizer": "AdamW",
+  "lr": 0.002,
+  "weight_decay": 0.0001,
+  "augmentation": "none; horizontal flipping would change digit semantics",
+  "normalization": "(uint8/255 - 0.5)/0.5; pad 2 pixels with -1 to 32x32",
+  "precision": "float32",
+  "checkpoint_selection": "highest validation accuracy; first epoch wins ties",
+  "target_baseline_accuracy": 0.98,
+  "target_note": "project target, not a reproduced literature result"
+}
